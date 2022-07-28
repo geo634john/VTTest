@@ -4,7 +4,7 @@
   "sources": {
     "s": {
       "type": "vector",
-      "url": "https://github.com/geo634john/VTTest/VectorTileServer/",
+      "url": "https://geo634john.github.io/VTTest/VectorTileServer",
       "minZoom": 14,
       "maxZoom": 17
     }
