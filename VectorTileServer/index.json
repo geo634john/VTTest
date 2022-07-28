@@ -1,6 +1,6 @@
 {
  "currentVersion": 10.9,
- "name": "VT Test",
+ "name": "VT Test 3",
  "capabilities": "TilesOnly",
  "copyrightText": "地理院地図Vector（仮称）",
  "type": "indexedFlat",
@@ -130,14 +130,9 @@
     "resolution": 1.19432856698734,
     "scale": 4513.9887055
    }
-   {
-     "level":17,
-     "resolution":0.5971642835598172,
-     "scale":2256.994353
-   },
   ]
  },
- "maxzoom": 17,
+ "maxzoom": 16,
  "resourceInfo": {
   "styleVersion": 8,
   "tileCompression": "gzip",
@@ -149,7 +144,7 @@
   }
  },
  "minLOD": 4,
- "maxLOD": 17,
+ "maxLOD": 16,
  "maxExportTilesCount": 100000,
  "supportedExtensions": ""
 }
