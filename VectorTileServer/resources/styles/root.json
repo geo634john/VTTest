@@ -4,25 +4,63 @@
   "sources": {
     "s": {
       "type": "vector",
-      "url": "https://geo634john.github.io/VTTest/VectorTileServer",
-      "minZoom": 14,
-      "maxZoom": 17
+      "url": "https://geo634john.github.io/VTTest/VectorTileServer/",
+      "minZoom": 4,
+      "maxZoom": 16
     }
   },
   "sprite": "https://gsi-cyberjapan.github.io/gsivectortile-mapbox-gl-js/sprite/std",
   "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "gsibv-vectortile-layer-1077",
+      "id": "background",
+      "paint": {
+        "background-color": "#D6EBF5"
+      },
+      "type": "background"
+    },
+    {
+      "id": "ls-coastline",
       "type": "line",
       "source": "s",
-      "source-layer": "road",
-      "minzoom": 14,
-      "maxzoom": 17,
-      "filter":["all",["in","ftCode",2703],["==","motorway",1],["any",["==","rnkWidth",0],[">=","rnkWidth",5]]],
-      "layout":{"line-cap":"square","line-join":"round","visibility":"visible"},
-      "paint":{"line-color":"rgba(100,100,100,1)","line-width":{"stops":[[15,1.5],[17,4]]}
+      "maxzoom": 9,
+      "minzoom": 4,
+      "source-layer": "coastline",
+      "paint": {"line-color": "#636566"}
+    },
+    {
+      "id": "pg-watera",
+      "type": "fill",
+      "source": "s",
+      "source-layer": "waterarea",
+      "minzoom": 4,
+      "maxzoom": 7,
+      "paint": {"fill-color": "rgba(46, 0, 255, 1)"}
+    },
+    {
+      "id": "ls-boundary-pref",
+      "type": "line",
+      "source": "s",
+      "source-layer": "boundary",
+      "minzoom": 6,
+      "maxzoom": 8,
+      "filter": ["all", ["==", "ftCode", 51212]],
+      "layout": {"line-cap": "square"},
+      "paint": {
+        "line-color": "#000000",
+        "line-dasharray": [10, 2, 1, 2]
       }
+    },
+    {
+      "id": "ls-boundary-cty",
+      "type": "line",
+      "source": "s",
+      "source-layer": "boundary",
+      "minzoom": 4,
+      "maxzoom": 8,
+      "filter": ["all", ["==", "ftCode", 51221]],
+      "layout": {"line-cap": "square"},
+      "paint": {"line-color": "rgba(34, 24, 21, 1)"}
     }
   ],
 "_ssl":true
